@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Mastering CSS: Image Gallery">
+  <title>Project Assignment: Image Gallery</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Thumbnails at the top -->
+    <ul class="thumbnails">
+      <li class="thumbnails_item">
+
+        <label for="thumbnails_item_radio1">
+          <img src="https://static.pexels.com/photos/24353/pexels-photo.jpg">
+        </label>
+      </li>
+      <li class="thumbnails_item">
+
+        <label for="thumbnails_item_radio2">
+          <img src="https://static.pexels.com/photos/2394/lights-clouds-dark-car.jpg">
+        </label>
+      </li>
+      <li class="thumbnails_item">
+
+        <label for="thumbnails_item_radio3">
+          <img src="https://static.pexels.com/photos/26796/pexels-photo.jpg">
+        </label>
+      </li>
+      <li class="thumbnails_item">
+
+        <label for="thumbnails_item_radio4">
+          <img src="https://static.pexels.com/photos/2394/lights-clouds-dark-car.jpg">
+        </label>
+      </li>
+      <!-- Thumbnail for 5th image -->
+      <li class="thumbnails_item">
+        <label for="thumbnails_item_radio5">
+          <img src="https://static.pexels.com/photos/116675/pexels-photo-116675.jpeg">
+        </label>
+      </li>
+    </ul>
+
+    <!-- HTML Code for Images linked to the thumbnails -->
+    <!-- Image 1
+    URL: https://static.pexels.com/photos/24353/pexels-photo.jpg
+    -->
+    <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio1" checked>
+    <img src="https://static.pexels.com/photos/24353/pexels-photo.jpg" class="big-img-item">
+
+    <!-- Image 2
+    URL: https://static.pexels.com/photos/2394/lights-clouds-dark-car.jpg
+    -->
+    <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio2">
+    <img src="https://static.pexels.com/photos/2394/lights-clouds-dark-car.jpg" class="big-img-item">
+    <!-- Image 3
+    URL: https://static.pexels.com/photos/26796/pexels-photo.jpg
+    -->
+    <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio3">
+    <img src="https://static.pexels.com/photos/26796/pexels-photo.jpg" class="big-img-item">
+    <!-- Image 4
+    URL: https://static.pexels.com/photos/2394/lights-clouds-dark-car.jpg
+    -->
+    <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio4">
+    <img src="https://static.pexels.com/photos/2394/lights-clouds-dark-car.jpg" class="big-img-item">
+
+    <!-- Image 5
+    URL: https://static.pexels.com/photos/116675/pexels-photo-116675.jpeg
+    -->
+    <input type="radio" name="thumbnails_item_radio" id="thumbnails_item_radio5">
+    <img src="https://static.pexels.com/photos/116675/pexels-photo-116675.jpeg" class="big-img-item">
+  </div>
+</body>
+</html>
