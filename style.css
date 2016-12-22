@@ -2,59 +2,60 @@
   box-sizing: border-box;
 }
 
-input[type='radio'] {
-  display: none;
-}
-
-.container {
-  width: 80%;
-  height: auto;
+.img-gallery {
+  max-width: 800px;
   padding: 0;
   position: relative;
 }
 
+
+.img-gallery input[type='radio'] {
+  display: none;
+}
+
 .thumbnails {
-  list-style: none;
   position: absolute;
   top: 5px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
+  left: 5px;
   padding: 0;
   margin: 0;
-
-  /*  makes thumbnail items display one by one  */
   display: flex;
   flex-wrap: wrap;
-
+  align-content: center;
   z-index: 5;
   opacity: 0.5;
+  /*-webkit-transition: prop time;*/
+  /*-moz-transition: prop time;*/
+  /*-ms-transition: prop time;*/
+  /*-o-transition: prop time;*/
   transition: opacity .5s ease-in-out;
 }
 
 .thumbnails:hover {
   opacity: 1;
 }
+
 .thumbnails_item {
-  display: inline-block;
-  background-color: rgba(0,0,0,0.7);
-  padding: 5px;
-}
-
-label {
+  border: 5px solid rgba(0,0,0,0.7);
+  width: 6em;
+  height: 3.5em;
+  /*flex: 1;*/
   cursor: pointer;
+  display: flex;
+  align-content: center;
 }
 
-label[for^='thumbnails_item_radio'] img {
-  width: 130px;
-  height: 86px;
-  display: block;
+.thumbnails_item img {
+  width: 100%;
   opacity: 0.5;
+  /*-webkit-transition: prop time;*/
+  /*-moz-transition: prop time;*/
+  /*-ms-transition: prop time;*/
+  /*-o-transition: prop time;*/
   transition: opacity .5s ease-in-out;
 }
 
-label[for^='thumbnails_item_radio'] img:hover {
+.thumbnails_item img:hover {
   opacity: 1;
 }
 
@@ -65,10 +66,43 @@ label[for^='thumbnails_item_radio'] img:hover {
   right: 0;
   width: 100%;
   opacity: 0;
+  /*-webkit-transition: prop time;*/
+  /*-moz-transition: prop time;*/
+  /*-ms-transition: prop time;*/
+  /*-o-transition: prop time;*/
   transition: opacity .8s ease-in-out;
 }
 
-
-input:checked + .big-img-item {
+.img-gallery input:checked + .big-img-item {
   opacity: 1;
+}
+
+
+@media (max-width: 600px) {
+  .thumbnails_item {
+    border: 4px solid rgba(0,0,0,0.7);
+    width: 5.5em;
+    height: 3em;
+  }
+}
+
+@media (max-width: 500px) {
+  .thumbnails_item {
+    border: 3px solid rgba(0,0,0,0.7);
+    width: 4em;
+    height: 2.3em;
+  }
+}
+
+@media (max-width: 360px) {
+  .thumbnails {
+    top: 2px;
+    left: 2px;
+  }
+
+  .thumbnails_item {
+    border: 2px solid rgba(0,0,0,0.7);
+    width: 3em;
+    height: 1.75em;
+  }
 }
